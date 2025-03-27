@@ -25,6 +25,14 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
+task gitConfig(type:Exec) {
+    // This is ensures correct merge driver
+    commandLine'git', 'config', '--local', 'merge.autoselect-nonempty.driver', '__CRIO__/merge_drivers/autoselect-nonempty %O %A %B %P'
+}
+
+run.dependsOn gitConfig
+test.dependsOn gitConfig
+
 application {
     // Define the main class for the application.
     mainClass = 'com.crio.qcalc.App'

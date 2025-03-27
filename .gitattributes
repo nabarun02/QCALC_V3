@@ -19,3 +19,6 @@ app/src/test/java/com/crio/qcalc/StandardCalculatorTest.java merge=copy-merge
 
 # app/build.gradle
 app/build.gradle merge=copy-merge
+
+# Eliminate merge conflicts where one side is empty
+app/src/main/** merge=autoselect-nonempty
