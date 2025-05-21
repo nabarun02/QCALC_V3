@@ -4,11 +4,28 @@
 package com.crio.qcalc;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
+    public String getGreeting() {
+
+        return "Hello World!";
+
+    }
+    
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        StandardCalculator calc = new StandardCalculator();
+
+        calc.add(1, 1);
+
+        calc.subtract(9, 6);
+
+        calc.multiply(5, 6);
+
+        calc.divide(15, 3);
+        
+        calc.clearResult();
+
+        System.out.println("Result after AC is: " + calc.getResult());
+
     }
 }
