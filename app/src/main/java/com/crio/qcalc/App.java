@@ -11,21 +11,18 @@ public class App {
 
     }
     
+    
     public static void main(String[] args) {
 
-        StandardCalculator calc = new StandardCalculator();
+        System.out.println(new App().getGreeting());
 
-        calc.add(1, 1);
+        ScientificCalculator calc = new ScientificCalculator();
 
-        calc.subtract(9, 6);
+        int result= calc.modulo(5, 2);
 
-        calc.multiply(5, 6);
-
-        calc.divide(15, 3);
-        
-        calc.clearResult();
-
-        System.out.println("Result after AC is: " + calc.getResult());
+        System.out.println("modulo =" + result);
 
     }
+
+
 }
